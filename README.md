@@ -1,31 +1,44 @@
 # Kawasaki-Disease-Machine-Learning
 Machine learning models for classifying and predicting Kawasaki disease-related outcomes, including disease differentiation, IVIG resistance prediction, and multi-disease classification
-
 This repository contains machine learning models for classifying and predicting outcomes related to Kawasaki disease. The projects focus on three main tasks: multi-disease classification, distinguishing between typical and atypical Kawasaki disease, and predicting IVIG resistance.
 
 ## Projects Overview
 
 ### 1. Five-Class Disease Classification
 
-This project classifies five different diseases, including Kawasaki disease, sepsis, and pneumonia, using the CatBoost model. It addresses data imbalance, includes detailed evaluation metrics like PR curves and ROC curves, and uses SHAP for model interpretability.
+This project classifies five different diseases, including Kawasaki disease, sepsis, and pneumonia, using the CatBoost model. It addresses data imbalance, includes detailed evaluation metrics like Precision-Recall (PR) curves and Receiver Operating Characteristic (ROC) curves, and uses SHAP for model interpretability.
 
-- [Project Details](Five-Class-Disease-Classification/README.md)
+- **Goal**: To classify patients into one of five disease categories.
+- **Key Models**: CatBoost, LightGBM, XGBoost.
+- **Features**: Blood markers, clinical features like temperature, and other relevant clinical data.
+- **Evaluation**: Confusion matrix, PR curve, ROC curve, and SHAP analysis.
 
-### 2. Kawasaki vs Atypical Kawasaki
+[Detailed Instructions for Five-Class Classification](Five-Class-Disease-Classification/README.md)
 
-This project differentiates between typical Kawasaki disease and atypical Kawasaki disease using an LGBM model with Focal Loss. The key challenge here is class imbalance.
+### 2. Kawasaki vs Atypical Kawasaki Classification
 
-- [Project Details](Kawasaki-Vs-Atypical-Kawasaki/README.md)
+This project focuses on distinguishing between typical Kawasaki disease and atypical Kawasaki disease using the LightGBM model with Focal Loss. This model addresses significant class imbalance issues.
+
+- **Goal**: To differentiate between typical and atypical Kawasaki disease.
+- **Key Models**: LightGBM with Focal Loss.
+- **Challenges**: Class imbalance (small number of atypical Kawasaki cases).
+- **Evaluation**: Confusion matrix, ROC curve, sensitivity, and specificity.
+
+[Detailed Instructions for Kawasaki vs Atypical Classification](Kawasaki-Vs-Atypical-Kawasaki/README.md)
 
 ### 3. IVIG Resistance Prediction
 
-This project predicts resistance to intravenous immunoglobulin (IVIG) treatment in Kawasaki disease patients. It uses logistic regression and score-based prediction, with a focus on feature selection and model evaluation.
+This project predicts resistance to intravenous immunoglobulin (IVIG) treatment in Kawasaki disease patients using logistic regression and a score-based system. Various feature selection techniques such as LASSO and Mann-Whitney U tests are applied.
 
-- [Project Details](IVIG-Resistance-Prediction/README.md)
+- **Goal**: To predict whether patients will respond to IVIG treatment.
+- **Key Models**: Logistic regression, score-based system.
+- **Features**: Clinical and lab results, patient demographics.
+- **Evaluation**: Sensitivity, specificity, ROC curve.
+
+[Detailed Instructions for IVIG Resistance Prediction](IVIG-Resistance-Prediction/README.md)
 
 ## Repository Structure
 
-```plaintext
 Kawasaki-Disease-ML-Models/
 │
 ├── Five-Class-Disease-Classification/
@@ -47,3 +60,11 @@ Kawasaki-Disease-ML-Models/
 │   └── README.md
 │
 └── README.md
+
+## Installation
+
+To install the necessary dependencies for all projects, run the following command:
+
+```bash
+pip install catboost lightgbm numpy pandas scikit-learn shap matplotlib
+
