@@ -1,6 +1,5 @@
 # Kawasaki-Disease-Machine-Learning
 Machine learning models for classifying and predicting Kawasaki disease-related outcomes, including disease differentiation, IVIG resistance prediction, and multi-disease classification
-This repository contains machine learning models for classifying and predicting outcomes related to Kawasaki disease. The projects focus on three main tasks: multi-disease classification, distinguishing between typical and atypical Kawasaki disease, and predicting IVIG resistance.
 
 ## Projects Overview
 
@@ -39,7 +38,8 @@ This project predicts resistance to intravenous immunoglobulin (IVIG) treatment 
 
 ## Repository Structure
 
-Kawasaki-Disease-ML-Models/
+```plaintext
+Kawasaki-Disease-Machine-Learning/
 │
 ├── Five-Class-Disease-Classification/
 │   ├── data/
